@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Application QCM</title>
+</head>
+<body>
+
+    <p><b>1. Qu'est-ce que JavaScript ?</b><br>
+    <input type="radio" name="question1"> Un langage de mise en forme<br>
+    <input type="radio" name="question1" id="correct1"> Un langage de script pour l'interactivité<br>
+    <input type="radio" name="question1"> Un système d'exploitation</p>
+
+    <p><b>2. Quelle balise permet d'insérer du JavaScript ?</b><br>
+    <input type="radio" name="question2" id="correct2"> &lt;script&gt;<br>
+    <input type="radio" name="question2"> &lt;js&gt;<br>
+    <input type="radio" name="question2"> &lt;javascript&gt;</p>
+
+    <br>
+    <input type="submit" value="Soumettre le QCM" onclick="verifierResultat()">
+
+    <script type="text/javascript">
+        function verifierResultat() {
+            var score = 0;
+
+            if (document.getElementById('correct1').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correct2').checked) {
+                score++;
+            }
+
+            document.write("<h2>Votre score est de : " + score + " / 2</h2>");
+        }
+    </script>
+
+</body>
+</html>
