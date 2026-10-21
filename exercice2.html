@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 2 - Validation Email</title>
+</head>
+<body>
+
+    <p><b>Entrez votre email :</b><br>
+    <input type="text" id="emailInput">
+    <input type="button" value="Vérifier" onclick="verifierEmail()"></p>
+
+    <script type="text/javascript">
+        function verifierEmail() {
+            var email = document.getElementById('emailInput').value;
+            var atPos = email.indexOf('@');
+            var dotPos = email.lastIndexOf('.');
+
+            if (atPos > 0 && dotPos > atPos + 1 && dotPos < email.length - 1) {
+                alert("L'adresse email est valide !");
+            } else {
+                alert("L'adresse email est invalide !");
+            }
+        }
+    </script>
+
+</body>
+</html>
